@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.ChatActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:weightSum="2"
+    android:id="@+id/charlinaer"
+    >
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/profileimage"
+        android:id="@+id/chatactivtiy_iamgeview"
+
+        android:padding="10dp"
+        android:layout_weight="1"
+        >
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:fontFamily="@font/comfortaa_light"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/chatacitvity_username"
+        ></TextView>
+
+</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/charlinaer"
+        android:id="@+id/chat_recycleview"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="50dp"
+            android:layout_weight="1"
+            >
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@null"
+                android:hint="Type Here"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+               android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:fontFamily="@font/comfortaa_light"
+                android:id="@+id/chattype_edittext"
+                ></EditText>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="500dp"
+          android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/PrimaryGreen"
+
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/send_logo"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                android:layout_gravity="center"
+                android:id="@+id/sendbutton"
+                >
+
+            </ImageView>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
