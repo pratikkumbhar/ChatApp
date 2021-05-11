@@ -19,21 +19,34 @@
             android:id="@+id/profileimage"
             ></de.hdodenhof.circleimageview.CircleImageView>
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Image"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="20dp"
+            ></TextView>
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="Sign Up"
             android:textSize="34dp"
+
+            android:textColor="@color/black"
+
             android:fontFamily="@font/comfortaa_light"
             android:textStyle="bold"></TextView>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
             android:hint="Username"
             android:id="@+id/signup_username_edittext"
             android:fontFamily="@font/comfortaa_light"
             android:textStyle="bold"
             android:textSize="24dp"
+            android:textColor="@color/black"
             android:layout_marginTop="30dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
@@ -52,7 +65,9 @@
             android:textSize="24dp"
             android:layout_marginTop="30dp"
             android:paddingTop="5dp"
+            android:textColor="@color/black"
             android:paddingBottom="5dp"
+            android:textColorHint="@color/black"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:layout_marginLeft="15dp"
@@ -69,7 +84,9 @@
             android:layout_marginTop="30dp"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
+            android:textColorHint="@color/black"
             android:paddingLeft="8dp"
+            android:textColor="@color/black"
             android:paddingRight="8dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
@@ -81,6 +98,8 @@
             android:layout_gravity="right"
             android:layout_marginRight="10dp"
             android:textSize="16dp"
+            android:fontFamily="@font/comfortaa_light"
+            android:textColor="@color/black"
             android:layout_marginTop="10dp"
             android:id="@+id/signuptesxt"></TextView>
         <Button
@@ -88,6 +107,10 @@
             android:layout_height="wrap_content"
             android:text="Sign Up"
             android:id="@+id/signupbutton"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:fontFamily="@font/comfortaa_light"
+
             android:backgroundTint="@color/Buttonbackground"
             android:layout_marginTop="30dp"></Button>
 

@@ -18,6 +18,7 @@ import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
+import static com.example.chatapp.Activity.ChatActivity.reciverimage;
 import static com.example.chatapp.Activity.ChatActivity.senderiamge;
 
 public class MessagesAdaptor extends RecyclerView.Adapter {
@@ -62,7 +63,7 @@ public class MessagesAdaptor extends RecyclerView.Adapter {
 
                 ReciverViewHolder viewHolder = (ReciverViewHolder) holder;
                 viewHolder.textView.setText(messages.getMessage());
-                Picasso.get().load(senderiamge).into(viewHolder.circleImageView);
+                Picasso.get().load(reciverimage).into(viewHolder.circleImageView);
 
             }
     }

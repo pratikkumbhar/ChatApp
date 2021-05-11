@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.chatapp.Activity.ChatActivity;
 import com.example.chatapp.Activity.Model.Users;
 import com.example.chatapp.R;
+import com.google.firebase.auth.FirebaseAuth;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -37,6 +38,12 @@ ArrayList<Users> userslist;
     @Override
     public void onBindViewHolder(@NonNull viewHolder holder, int position) {
             Users users = userslist.get(position);
+
+            if (FirebaseAuth.getInstance().getCurrentUser().getUid().equals(users.getUid()))
+            {
+                holder.itemView.setVisibility(View.GONE);
+            }
+
             holder.name.setText(users.getUsername());
             holder.statues.setText(users.getStatues());
         Picasso.get().load(users.getIamgeurl()).into(holder.imageView);

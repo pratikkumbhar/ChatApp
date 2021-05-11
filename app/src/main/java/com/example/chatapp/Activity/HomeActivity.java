@@ -32,6 +32,8 @@ FirebaseDatabase database;
 DatabaseReference reference;
 ArrayList<Users> userlist;
 ImageView signoutimageview;
+ImageView settingimageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +42,9 @@ ImageView signoutimageview;
         database = FirebaseDatabase.getInstance();
         userlist = new ArrayList<>();
         signoutimageview = findViewById(R.id.logout_imageview);
-
+        settingimageView = findViewById(R.id.setting_imageview);
         reference = database.getReference().child("user");
+
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -95,7 +98,12 @@ ImageView signoutimageview;
             }
         });
 
-
+        settingimageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,SettingActivity.class));
+            }
+        });
 
     }
 }

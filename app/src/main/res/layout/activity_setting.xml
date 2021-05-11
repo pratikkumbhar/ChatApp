@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SettingActivity"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Setting"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/comfortaa_light"
+            android:layout_weight="1"></TextView>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginTop="0dp"
+            android:paddingTop="10dp"
+            android:id="@+id/setting_done"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_done_24"></ImageView>
+    </LinearLayout>
+<de.hdodenhof.circleimageview.CircleImageView
+
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@mipmap/profileimage"
+    android:layout_marginTop="50dp"
+    android:id="@+id/settingimageView"
+    ></de.hdodenhof.circleimageview.CircleImageView>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settingimageView"
+        android:text="Enter Username"
+        android:id="@+id/settingusername"
+        android:gravity="center_horizontal"
+        android:background="@null"
+        android:textSize="28dp"
+        android:fontFamily="@font/comfortaa_light"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"></EditText>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settingusername"
+        android:text="Here You can Set Statues"
+        android:gravity="center_horizontal"
+        android:id="@+id/settingstatues"
+        android:textSize="24dp"
+        android:fontFamily="@font/comfortaa_light"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:background="@null"
+        android:layout_marginTop="30dp"></EditText>
+
+
+
+</LinearLayout>
